@@ -2138,19 +2138,6 @@ $doughnut-text-colour: $gray-darker;
 mm-course-list-item .item-icon-left {
   color: $black;
 }
-.mm-fileuploader-file-handler {
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        opacity: 0;
-        outline: none;
-        z-index: 100;
-    }
-}
-
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
 .mm-grades-container {
@@ -2321,54 +2308,6 @@ mm-course-list-item .item-icon-left {
   }
 }
 
-#mm-settings-languagelabel {
-  color: $base-color;
-}
-
-// Variables.
-$bar-side-menu-height: 80px !default;
-$bar-side-menu-color: $bar-content-bg !default;
-$bar-side-menu-border-color: $bar-content-border !default;
-$bar-side-menu-text-color: $bar-content-text !default;
-
-// Bar styles
-.bar-side-menu {
-  @include bar-style($bar-side-menu-color, $bar-side-menu-border-color, $bar-side-menu-text-color);
-  height: $bar-side-menu-height !important; // MOBILE-959: Added !important to fix side menu header in iOS.
-  .item {
-    background: transparent;
-    border: none;
-  }
-  .item-avatar {
-    margin-top: 0px !important; // MOBILE-959: Added to fix side menu header in iOS.
-    h2,
-    p {
-      color: $bar-side-menu-text-color;
-    }
-  }
-}
-
-.has-side-menu-header {
-  top: $bar-side-menu-height;
-}
-
-.mm-sidemenu-menu {
-  .item .badge {
-    right: 16px;
-  }
-}
-
-
-.foreground-ion-edit.ion-edit:before {
-    position: relative;
-    left: 120px;
-    bottom: 15px;
-    font-size: 24px;
-}
-
-.mm-site_mm_user-profile .mm-tab-handlers {
-    padding-bottom: 16px;
-}
 
 $mm-question-correct-color:         $green-dark !default;
 $mm-question-correct-color-bg:      $green-light !default;
@@ -2502,6 +2441,68 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
+#mm-settings-languagelabel {
+  color: $base-color;
+}
+
+.mm-fileuploader-file-handler {
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        outline: none;
+        z-index: 100;
+    }
+}
+
+// Variables.
+$bar-side-menu-height: 80px !default;
+$bar-side-menu-color: $bar-content-bg !default;
+$bar-side-menu-border-color: $bar-content-border !default;
+$bar-side-menu-text-color: $bar-content-text !default;
+
+// Bar styles
+.bar-side-menu {
+  @include bar-style($bar-side-menu-color, $bar-side-menu-border-color, $bar-side-menu-text-color);
+  height: $bar-side-menu-height !important; // MOBILE-959: Added !important to fix side menu header in iOS.
+  .item {
+    background: transparent;
+    border: none;
+  }
+  .item-avatar {
+    margin-top: 0px !important; // MOBILE-959: Added to fix side menu header in iOS.
+    h2,
+    p {
+      color: $bar-side-menu-text-color;
+    }
+  }
+}
+
+.has-side-menu-header {
+  top: $bar-side-menu-height;
+}
+
+.mm-sidemenu-menu {
+  .item .badge {
+    right: 16px;
+  }
+}
+
+
+.foreground-ion-edit.ion-edit:before {
+    position: relative;
+    left: 120px;
+    bottom: 15px;
+    font-size: 24px;
+}
+
+.mm-site_mm_user-profile .mm-tab-handlers {
+    padding-bottom: 16px;
+}
+
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
         min-height: 55px;
@@ -2529,7 +2530,6 @@ li.mm-question-answer-incorrect,
         }
     }
 }
-
 .mm-site_coursesgrades .item .badge {
   right: 16px;
 }
@@ -3014,27 +3014,6 @@ $mma-chat-notice-badge: "stable" !default;
     }
   }
 }
-.mm-site_mod_choice {
-  .chart {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 767px) {
-    .col {
-      border-left: $item-border-width solid $item-default-border;
-
-      &.item, .chart-item {
-        margin-top: 0;
-        border-top: 0;
-      }
-
-      &:first-child {
-        border-left: 0;
-      }
-    }
-  }
-}
 .mm-site_mod_feedback {
   .mm-analysis {
     ul {
@@ -3060,6 +3039,27 @@ $mma-chat-notice-badge: "stable" !default;
   }
 }
 
+.mm-site_mod_choice {
+  .chart {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 767px) {
+    .col {
+      border-left: $item-border-width solid $item-default-border;
+
+      &.item, .chart-item {
+        margin-top: 0;
+        border-top: 0;
+      }
+
+      &:first-child {
+        border-left: 0;
+      }
+    }
+  }
+}
 
 .mma-forum-discussion-link {
     text-decoration: none;
@@ -3148,55 +3148,6 @@ $mma-chat-notice-badge: "stable" !default;
         padding: 0;
         border: 0
     }
-}
-
-
-$mma-mod-scorm-level-margin:		25px !default;
-$mma-mod-scorm-warning-color:		$red !default;
-
-@for $i from 0 through 15 {
-  .mma-scorm-level-#{$i} {
-    padding-left: $item-padding + 15px * $i
-  }
-}
-
-.mma-mod-scorm-checkbox-padding {
-  padding: 5px 10px;
-}
-
-.mma-mod-scorm-warning {
-  color: $mma-mod-scorm-warning-color;
-}
-
-ion-popover-view {
-  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
-  &.mma-scorm-popover {
-    height: auto;
-    max-height: 80%;
-    overflow: scroll;
-
-    ion-content {
-      position: relative;
-    }
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    p.padding {
-      margin: 0px; /* Don't add margins to p with padding inside the TOC. */
-    }
-  }
-
-  /* Decrease items padding in popover. */
-  .mma-scorm-popover-item {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-/* Fix popover styles in iOS. */
-.platform-ios ion-popover-view.mma-scorm-popover {
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 
@@ -3325,6 +3276,51 @@ p.mma-mod-quiz-warning {
   }
 }
 
+.item.mma-mod-lesson-selected {
+  @extend .mm-menu-selected;
+}
+
+.mma-mod-lesson-slideshow {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.mma-mod-lesson-ongoingscore,
+.item.mma-mod-lesson-ongoingscore,
+.mma-mod-lesson-ongoingscore span,
+.item.mma-mod-lesson-ongoingscore span {
+  // Same styles as .item p.
+  color: $gray-darker;
+  font-size: 14px;
+}
+
+.mma-mod_lesson-lessonstats, .mma-mod_lesson-userstats {
+  .item.row .col-33,
+  .item.row .col-50 {
+    border-color: $item-default-border;
+    border-style: solid;
+    &:not(:first-child) {
+      border-left-width: $item-border-width;
+    }
+  }
+}
+
+.mm-site_mod_lesson-userretake {
+  .mma-mod_lesson-answer {
+    .item {
+      border-top: 1px solid $item-default-border;
+      border-radius: 0;
+    }
+  }
+
+  .highlight {
+    background-color: $blue-light;
+    p {
+      color: $blue-dark;
+    }
+  }
+}
+
 $mma-mod-wiki-toc-level-padding:    12px !default;
 $mma-mod-wiki-newentry-link-color:  $red !default;
 $mma-mod-wiki-toc-title-color:      $gray-darker !default;
@@ -3385,49 +3381,53 @@ $mma-mod-wiki-subwiki-selected-background-color:   $gray-light !default;
   }
 }
 
-.item.mma-mod-lesson-selected {
-  @extend .mm-menu-selected;
-}
 
-.mma-mod-lesson-slideshow {
-  max-width: 100%;
-  max-height: 100%;
-}
+$mma-mod-scorm-level-margin:		25px !default;
+$mma-mod-scorm-warning-color:		$red !default;
 
-.mma-mod-lesson-ongoingscore,
-.item.mma-mod-lesson-ongoingscore,
-.mma-mod-lesson-ongoingscore span,
-.item.mma-mod-lesson-ongoingscore span {
-  // Same styles as .item p.
-  color: $gray-darker;
-  font-size: 14px;
-}
-
-.mma-mod_lesson-lessonstats, .mma-mod_lesson-userstats {
-  .item.row .col-33,
-  .item.row .col-50 {
-    border-color: $item-default-border;
-    border-style: solid;
-    &:not(:first-child) {
-      border-left-width: $item-border-width;
-    }
+@for $i from 0 through 15 {
+  .mma-scorm-level-#{$i} {
+    padding-left: $item-padding + 15px * $i
   }
 }
 
-.mm-site_mod_lesson-userretake {
-  .mma-mod_lesson-answer {
-    .item {
-      border-top: 1px solid $item-default-border;
-      border-radius: 0;
+.mma-mod-scorm-checkbox-padding {
+  padding: 5px 10px;
+}
+
+.mma-mod-scorm-warning {
+  color: $mma-mod-scorm-warning-color;
+}
+
+ion-popover-view {
+  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
+  &.mma-scorm-popover {
+    height: auto;
+    max-height: 80%;
+    overflow: scroll;
+
+    ion-content {
+      position: relative;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    p.padding {
+      margin: 0px; /* Don't add margins to p with padding inside the TOC. */
     }
   }
 
-  .highlight {
-    background-color: $blue-light;
-    p {
-      color: $blue-dark;
-    }
+  /* Decrease items padding in popover. */
+  .mma-scorm-popover-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
+}
+
+/* Fix popover styles in iOS. */
+.platform-ios ion-popover-view.mma-scorm-popover {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
@@ -3456,108 +3456,6 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 	font-size: 16px;
 }
 
-// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
-.mma-qtype-ddmarker-container {
-  mm-loading {
-    position: absolute;
-    left: 50%;
-  }
-
-  .qtext {
-    margin-bottom: 0.5em;
-    display: block;
-  }
-
-  div.droparea img  {
-    border: 1px solid $gray-darker;
-    max-width: 100%;
-  }
-
-  .draghome img, .draghome span {
-    visibility: hidden;
-  }
-
-  .dragitems .dragitem {
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
-  }
-
-  .dropzones {
-    position: absolute;
-  }
-  .dropzones svg {
-    z-index: 3;
-  }
-
-  .dragitem.beingdragged .markertext {
-    z-index: 5;
-    box-shadow: 3px 3px 4px $gray-darker;
-  }
-  .dragitems .draghome {
-    margin: 10px;
-    display: inline-block;
-  }
-
-  .dragitems.readonly .dragitem {
-    cursor: auto;
-  }
-  div.ddarea {
-    text-align: center;
-  }
-  div.ddarea .markertexts {
-    min-height: 80px;
-    position: absolute;
-    text-align: left;
-  }
-  .dropbackground {
-    margin: 0 auto;
-  }
-
-  div.dragitems div.draghome, div.dragitems div.dragitem,
-  div.draghome, div.drag {
-    font: 13px/1.231 arial,helvetica,clean,sans-serif;
-  }
-  div.dragitems span.markertext,
-  div.markertexts span.markertext{
-    margin: 0 5px;
-    z-index: 2;
-    background-color: $white;
-    border: 2px solid $gray-darker;
-    padding: 5px;
-    display: inline-block;
-    zoom: 1;
-    border-radius: 10px;
-  }
-  div.markertexts span.markertext {
-    z-index: 3;
-    background-color: $yellow-light;
-    border-style: solid;
-    border-width: 2px;
-    border-color: $yellow;
-    position: absolute;
-  }
-  span.wrongpart {
-    background-color: $yellow-light;
-    border-style: solid;
-    border-width: 2px;
-    border-color: $yellow;
-    padding: 5px;
-    border-radius: 10px;
-    filter: alpha(opacity=60);
-    opacity: 0.6;
-    margin: 5px;
-    display: inline-block;
-  }
-  div.dragitems img.target {
-    position: absolute;
-    left: -7px; /* This must be half the size of the target image, minus 0.5. */
-    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
-  }
-  div.dragitems div.draghome img.target {
-    display: none;
-  }
-}
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
 .mma-qtype-ddimageortext-container {
   mm-loading {
@@ -3776,40 +3674,108 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 
 
 
-// Style gapselect content a bit. All these styles are copied from Moodle.
-.mma-qtype-gapselect-container {
-  p {
-    margin: 0 0 .5em;
+// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddmarker-container {
+  mm-loading {
+    position: absolute;
+    left: 50%;
   }
 
-  select {
-    height: 30px;
-    line-height: 30px;
-    display: inline-block;
-    border: 1px solid $gray-dark;
-    padding: 4px 6px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    background: $gray-lighter;
+  .qtext {
+    margin-bottom: 0.5em;
+    display: block;
   }
-}
 
-
-// Style match content a bit.
-.mma-qtype-match-container .item-select {
-  select,
-  .mm-select-fix {
-    padding: 0 36px 0 0;
+  div.droparea img  {
+    border: 1px solid $gray-darker;
     max-width: 100%;
-    display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
+  }
+
+  .draghome img, .draghome span {
+    visibility: hidden;
+  }
+
+  .dragitems .dragitem {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .dropzones {
+    position: absolute;
+  }
+  .dropzones svg {
+    z-index: 3;
+  }
+
+  .dragitem.beingdragged .markertext {
+    z-index: 5;
+    box-shadow: 3px 3px 4px $gray-darker;
+  }
+  .dragitems .draghome {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .dragitems.readonly .dragitem {
+    cursor: auto;
+  }
+  div.ddarea {
+    text-align: center;
+  }
+  div.ddarea .markertexts {
+    min-height: 80px;
+    position: absolute;
+    text-align: left;
+  }
+  .dropbackground {
+    margin: 0 auto;
+  }
+
+  div.dragitems div.draghome, div.dragitems div.dragitem,
+  div.draghome, div.drag {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+  }
+  div.dragitems span.markertext,
+  div.markertexts span.markertext{
+    margin: 0 5px;
+    z-index: 2;
+    background-color: $white;
+    border: 2px solid $gray-darker;
+    padding: 5px;
+    display: inline-block;
+    zoom: 1;
+    border-radius: 10px;
+  }
+  div.markertexts span.markertext {
+    z-index: 3;
+    background-color: $yellow-light;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $yellow;
+    position: absolute;
+  }
+  span.wrongpart {
+    background-color: $yellow-light;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $yellow;
+    padding: 5px;
+    border-radius: 10px;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    margin: 5px;
+    display: inline-block;
+  }
+  div.dragitems img.target {
+    position: absolute;
+    left: -7px; /* This must be half the size of the target image, minus 0.5. */
+    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
+  }
+  div.dragitems div.draghome img.target {
+    display: none;
   }
 }
-
 // Style multianswer content a bit. All these styles are copied from Moodle.
 .mma-qtype-multianswer-container {
   p {
@@ -3851,6 +3817,40 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
   input[type="radio"], input[type="checkbox"] {
     margin-top: -4px;
     margin-right: 7px;
+  }
+}
+
+
+// Style match content a bit.
+.mma-qtype-match-container .item-select {
+  select,
+  .mm-select-fix {
+    padding: 0 36px 0 0;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+  }
+}
+
+// Style gapselect content a bit. All these styles are copied from Moodle.
+.mma-qtype-gapselect-container {
+  p {
+    margin: 0 0 .5em;
+  }
+
+  select {
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border: 1px solid $gray-dark;
+    padding: 4px 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: $gray-lighter;
   }
 }
 
