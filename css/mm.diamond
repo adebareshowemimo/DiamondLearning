@@ -109,12 +109,7 @@ a.item.item-icon-left.ng-binding :hover {
 
 nav ul.list.dark {
     /* background-color: #000; */
-    background-image: url('../../menu.png');
-	background: #0f0d15; /* Old Browsers */
-	background: -webkit-radial-gradient(center,#0f0d15,#110c43); /*Safari 5.1-6*/
-	background: -o-radial-gradient(center,#0f0d15,#110c43); /*Opera 11.1-12*/
-	background: -moz-radial-gradient(center,#0f0d15,#110c43); /*Fx 3.6-15*/
-	background: radial-gradient(ellipse at center, #0f0d15, #110c43); /*Standard*/
+    background-image: url(/img/menu.png);
 }
 
 .item-divider {
@@ -130,9 +125,9 @@ nav ul li a.item:hover {
 
 ion-header-bar.bar-content.bar.bar-header {
     border-bottom: 5px solid rgb(0, 0, 0);
-    border-image: url('../../border.png') 10;
-	  -webkit-border-image: url('../../border.png') 10;
-    -o-border-image: url('../../border.png') 10;
+    border-image: url(/img/border.png) 10;
+	  -webkit-border-image: url(/img/border.png) 10;
+    -o-border-image: url(/img/border.png) 10;
 }
 
 .mm-mm_login_credentials .box {

@@ -1999,23 +1999,6 @@ $mm-rte-min-height: 80px !default;
     margin: 0;
   }
 }
-
-.item.item-button-right .badge.mm-course-download{
-  right: $spinner-width + $item-padding;
-}
-
-.mm-course-module-handler mm-format-text + mm-format-text {
-  margin-top: 16px;
-}
-
-mm-course-mod-description .card .item {
-  padding: $item-padding / 2;
-}
-
-.padding mm-course-mod-description .card {
-  margin-top: 0;
-}
-
 $chart-size: 70px;
 $doughnut-border-size: 15px;
 $doughnut-dasharray: 173;
@@ -2138,17 +2121,21 @@ $doughnut-text-colour: $gray-darker;
 mm-course-list-item .item-icon-left {
   color: $black;
 }
-.mm-fileuploader-file-handler {
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        opacity: 0;
-        outline: none;
-        z-index: 100;
-    }
+
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
+}
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+  margin-top: 16px;
+}
+
+mm-course-mod-description .card .item {
+  padding: $item-padding / 2;
+}
+
+.padding mm-course-mod-description .card {
+  margin-top: 0;
 }
 
 /* - User grades table (most of it extracted from MM1)
@@ -2454,8 +2441,17 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
-#mm-settings-languagelabel {
-  color: $base-color;
+.mm-fileuploader-file-handler {
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        outline: none;
+        z-index: 100;
+    }
 }
 
 // Variables.
@@ -2502,6 +2498,10 @@ $bar-side-menu-text-color: $bar-content-text !default;
 .mm-site_mm_user-profile .mm-tab-handlers {
     padding-bottom: 16px;
 }
+#mm-settings-languagelabel {
+  color: $base-color;
+}
+
 
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
@@ -2688,51 +2688,6 @@ $mma-messages-date-badge: "stable" !default;
     }
   }
 }
-// Style multianswer content a bit. All these styles are copied from Moodle.
-.mma-qtype-multianswer-container {
-  p {
-    margin: 0 0 .5em;
-  }
-
-  .answer div.r0, .answer div.r1 {
-    padding: 0.3em;
-  }
-
-  table {
-    width: 100%;
-    display: table;
-  }
-
-  tr {
-    display: table-row;
-  }
-
-  td {
-    display: table-cell;
-  }
-
-  input, select {
-    display: inline-block;
-    border: 1px solid #ccc;
-    padding: 4px 6px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-
-  select {
-    height: 30px;
-    line-height: 30px;
-  }
-
-  input[type="radio"], input[type="checkbox"] {
-    margin-top: -4px;
-    margin-right: 7px;
-  }
-}
-
-
 
 $mma-mod-assign-warning-color: $red !default;
 
@@ -3004,27 +2959,6 @@ p.mma-mod-assign-warning {
   }
 }
 
-.mm-site_mod_choice {
-  .chart {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 767px) {
-    .col {
-      border-left: $item-border-width solid $item-default-border;
-
-      &.item, .chart-item {
-        margin-top: 0;
-        border-top: 0;
-      }
-
-      &:first-child {
-        border-left: 0;
-      }
-    }
-  }
-}
 $mma-chat-notice-badge: "stable" !default;
 
 // The notice displayed in the list.
@@ -3077,6 +3011,27 @@ $mma-chat-notice-badge: "stable" !default;
 
     .button {
       border: 0;
+    }
+  }
+}
+.mm-site_mod_choice {
+  .chart {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 767px) {
+    .col {
+      border-left: $item-border-width solid $item-default-border;
+
+      &.item, .chart-item {
+        margin-top: 0;
+        border-top: 0;
+      }
+
+      &:first-child {
+        border-left: 0;
+      }
     }
   }
 }
@@ -3241,55 +3196,6 @@ $mma-chat-notice-badge: "stable" !default;
 }
 
 
-$mma-mod-scorm-level-margin:		25px !default;
-$mma-mod-scorm-warning-color:		$red !default;
-
-@for $i from 0 through 15 {
-  .mma-scorm-level-#{$i} {
-    padding-left: $item-padding + 15px * $i
-  }
-}
-
-.mma-mod-scorm-checkbox-padding {
-  padding: 5px 10px;
-}
-
-.mma-mod-scorm-warning {
-  color: $mma-mod-scorm-warning-color;
-}
-
-ion-popover-view {
-  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
-  &.mma-scorm-popover {
-    height: auto;
-    max-height: 80%;
-    overflow: scroll;
-
-    ion-content {
-      position: relative;
-    }
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    p.padding {
-      margin: 0px; /* Don't add margins to p with padding inside the TOC. */
-    }
-  }
-
-  /* Decrease items padding in popover. */
-  .mma-scorm-popover-item {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-/* Fix popover styles in iOS. */
-.platform-ios ion-popover-view.mma-scorm-popover {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-
 $mma-mod-quiz-warning-color:      $red !default;
 $mma-mod-quiz-highlight-bgcolor:  $blue-light !default;
 $mma-mod-quiz-highlight-color:    $blue-dark !default;
@@ -3385,34 +3291,53 @@ p.mma-mod-quiz-warning {
 #mma-mod-quiz-toc .item {
   border-color: $gray-dark;
 }
-.mm-site_mod_survey {
-  .row, .input-label {
-    font-size: $font-size-base;
+
+$mma-mod-scorm-level-margin:		25px !default;
+$mma-mod-scorm-warning-color:		$red !default;
+
+@for $i from 0 through 15 {
+  .mma-scorm-level-#{$i} {
+    padding-left: $item-padding + 15px * $i
   }
+}
 
-  .mma-mod_survey-darkbg {
-    background-color: $item-divider-bg;
-  }
+.mma-mod-scorm-checkbox-padding {
+  padding: 5px 10px;
+}
 
-  .mma-mod_survey-padding-top {
-    padding-top: 20px;
-  }
+.mma-mod-scorm-warning {
+  color: $mma-mod-scorm-warning-color;
+}
 
-  textarea.mma-mod_survey-textarea {
-    height: 100px;
-    border: 1px solid $item-default-border;
-  }
+ion-popover-view {
+  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
+  &.mma-scorm-popover {
+    height: auto;
+    max-height: 80%;
+    overflow: scroll;
 
-  select.mma-mod_survey-select {
-    background-color: transparent;
-    padding-left: 0px;
-    padding-right: $item-padding * 2;
-    max-width: 100%;
-
-    .mma-mod_survey-defaultoption {
+    ion-content {
+      position: relative;
+    }
+    &::-webkit-scrollbar {
       display: none;
     }
+    p.padding {
+      margin: 0px; /* Don't add margins to p with padding inside the TOC. */
+    }
   }
+
+  /* Decrease items padding in popover. */
+  .mma-scorm-popover-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Fix popover styles in iOS. */
+.platform-ios ion-popover-view.mma-scorm-popover {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 $mma-mod-wiki-toc-level-padding:    12px !default;
@@ -3501,112 +3426,36 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 	font-size: 16px;
 }
 
-// Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
-.mma-qtype-ddimageortext-container {
-  mm-loading {
-    position: absolute;
-    left: 50%;
+.mm-site_mod_survey {
+  .row, .input-label {
+    font-size: $font-size-base;
   }
 
-  .qtext {
-    margin-bottom: 0.5em;
-    display: block;
+  .mma-mod_survey-darkbg {
+    background-color: $item-divider-bg;
   }
 
-  div.droparea img {
-    border: 1px solid $gray-darker;
+  .mma-mod_survey-padding-top {
+    padding-top: 20px;
+  }
+
+  textarea.mma-mod_survey-textarea {
+    height: 100px;
+    border: 1px solid $item-default-border;
+  }
+
+  select.mma-mod_survey-select {
+    background-color: transparent;
+    padding-left: 0px;
+    padding-right: $item-padding * 2;
     max-width: 100%;
-  }
 
-  .draghome {
-    vertical-align: top;
-    margin: 5px;
-    visibility : hidden;
-  }
-  .draghome img {
-    display: block;
-  }
-
-  div.draghome {
-    border: 1px solid $gray-darker;
-    cursor: pointer;
-    background-color: #B0C4DE;
-    display:inline-block;
-    height: auto;
-    width: auto;
-    zoom: 1;
-  }
-
-  .group1 {
-    background-color: $white;
-  }
-  .group2 {
-    background-color: $blue-light;
-  }
-  .group3 {
-    background-color: #DCDCDC;
-  }
-  .group4 {
-    background-color: #D8BFD8;
-  }
-  .group5 {
-    background-color: #87CEFA;
-  }
-  .group6 {
-    background-color: #DAA520;
-  }
-  .group7 {
-    background-color: #FFD700;
-  }
-  .group8 {
-    background-color: #F0E68C;
-  }
-  .drag {
-    border: 1px solid $gray-darker;
-    cursor: pointer;
-    z-index: 2;
-  }
-  .dragitems.readonly .drag {
-    cursor: auto;
-  }
-  .dragitems>div {
-    clear: both;
-  }
-  .dragitems {
-    cursor: pointer;
-  }
-  .dragitems.readonly {
-    cursor: auto;
-  }
-  .drag img {
-    display: block;
-  }
-
-  div.ddarea {
-    text-align : center;
-    position: relative;
-  }
-  .dropbackground {
-    margin:0 auto;
-  }
-  .dropzone {
-    border: 1px solid $gray-darker;
-    position: absolute;
-    z-index: 1;
-    cursor: pointer;
-  }
-  .readonly .dropzone {
-    cursor: auto;
-  }
-
-  div.dragitems div.draghome, div.dragitems div.drag {
-    font:13px/1.231 arial,helvetica,clean,sans-serif;
-  }
-  .drag.beingdragged {
-    z-index: 3;
-    box-shadow: 3px 3px 4px $gray-darker;
+    .mma-mod_survey-defaultoption {
+      display: none;
+    }
   }
 }
+
 // Style ddmarker content a bit. Almost all these styles are copied from Moodle.
 .mma-qtype-ddmarker-container {
   mm-loading {
@@ -3821,6 +3670,19 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 
 
 
+// Style match content a bit.
+.mma-qtype-match-container .item-select {
+  select,
+  .mm-select-fix {
+    padding: 0 36px 0 0;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+  }
+}
+
 // Style gapselect content a bit. All these styles are copied from Moodle.
 .mma-qtype-gapselect-container {
   p {
@@ -3842,15 +3704,153 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 }
 
 
-// Style match content a bit.
-.mma-qtype-match-container .item-select {
-  select,
-  .mm-select-fix {
-    padding: 0 36px 0 0;
+// Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddimageortext-container {
+  mm-loading {
+    position: absolute;
+    left: 50%;
+  }
+
+  .qtext {
+    margin-bottom: 0.5em;
+    display: block;
+  }
+
+  div.droparea img {
+    border: 1px solid $gray-darker;
     max-width: 100%;
-    display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
+  }
+
+  .draghome {
+    vertical-align: top;
+    margin: 5px;
+    visibility : hidden;
+  }
+  .draghome img {
+    display: block;
+  }
+
+  div.draghome {
+    border: 1px solid $gray-darker;
+    cursor: pointer;
+    background-color: #B0C4DE;
+    display:inline-block;
+    height: auto;
+    width: auto;
+    zoom: 1;
+  }
+
+  .group1 {
+    background-color: $white;
+  }
+  .group2 {
+    background-color: $blue-light;
+  }
+  .group3 {
+    background-color: #DCDCDC;
+  }
+  .group4 {
+    background-color: #D8BFD8;
+  }
+  .group5 {
+    background-color: #87CEFA;
+  }
+  .group6 {
+    background-color: #DAA520;
+  }
+  .group7 {
+    background-color: #FFD700;
+  }
+  .group8 {
+    background-color: #F0E68C;
+  }
+  .drag {
+    border: 1px solid $gray-darker;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .dragitems.readonly .drag {
+    cursor: auto;
+  }
+  .dragitems>div {
+    clear: both;
+  }
+  .dragitems {
+    cursor: pointer;
+  }
+  .dragitems.readonly {
+    cursor: auto;
+  }
+  .drag img {
+    display: block;
+  }
+
+  div.ddarea {
+    text-align : center;
+    position: relative;
+  }
+  .dropbackground {
+    margin:0 auto;
+  }
+  .dropzone {
+    border: 1px solid $gray-darker;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .readonly .dropzone {
+    cursor: auto;
+  }
+
+  div.dragitems div.draghome, div.dragitems div.drag {
+    font:13px/1.231 arial,helvetica,clean,sans-serif;
+  }
+  .drag.beingdragged {
+    z-index: 3;
+    box-shadow: 3px 3px 4px $gray-darker;
   }
 }
+// Style multianswer content a bit. All these styles are copied from Moodle.
+.mma-qtype-multianswer-container {
+  p {
+    margin: 0 0 .5em;
+  }
+
+  .answer div.r0, .answer div.r1 {
+    padding: 0.3em;
+  }
+
+  table {
+    width: 100%;
+    display: table;
+  }
+
+  tr {
+    display: table-row;
+  }
+
+  td {
+    display: table-cell;
+  }
+
+  input, select {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  select {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    margin-top: -4px;
+    margin-right: 7px;
+  }
+}
+
