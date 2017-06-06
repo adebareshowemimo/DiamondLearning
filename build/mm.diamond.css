@@ -109,10 +109,7 @@ a.item.item-icon-left.ng-binding :hover {
 
 nav ul.list.dark {
 		background: #050e37; 
-		background: -moz-linear-gradient(top, #050e37 0%, #123252 100%); 
-		background: -webkit-linear-gradient(top, #050e37 0%,#123252 100%); 
-		background: linear-gradient(to bottom, #050e37 0%,#123252 100%); 
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050e37', endColorstr='#123252',GradientType=0 ); 
+        background-image: url('../menu.png');
 }
 
 .item-divider {
