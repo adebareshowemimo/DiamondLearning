@@ -7779,3 +7779,215 @@ em {
   border-right: 1px solid #ddd; }
 .tablet .mm-split-pane-content {
   display: block; }
+  
+  
+  
+  
+  a.item.item-text-wrap.item-icon-left.item-icon-right {
+    background-color: #019ca3;
+}
+
+.bar-content {
+   background-color: #b5d334;
+ }
+ 
+ 
+ .list.list-inset.login-home {
+    background-color: rgba(132, 56, 56, 0);
+}
+
+
+.form-home .padding > .button.button-block:first-child {
+    margin-top: 0;
+    background-color: #b0c516;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-color: rgba(230, 230, 230, 0);
+    border-radius: 0px;
+}
+
+.item-icon-right .icon-accessory, .item.item-howto.item-icon-right .icon-accessory, .mm-grades-table .item-howto.item-icon-right.itemcenter .icon-accessory {
+    right: 0px;
+    background-color: #ef473a;
+    font-size: 18px;
+}
+
+.list-home {
+	margin-top : 10px;
+}
+
+.bar-side-menu {
+    border-color: transparent;
+    background-color: #019ca3;
+    background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
+    color: #ffffff;
+    height: 80px !important;
+}
+
+.icon {
+    color: #b5d334;
+}
+
+
+
+
+ .home-hello .item{
+   position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  border: 0;
+  background: rgba(255,255,255, 0.6);
+ }
+
+
+ .card.col.home {
+   margin: 10px 10px;
+ }
+ .card.col.home h1{text-align: center;}
+ .card.col.home h2{text-align: center;}
+
+ 
+element.style {
+    left: 61px;
+    right: 61px;
+}
+
+.title.title-center.header-item {
+    text-transform: uppercase;
+}
+
+
+
+nav ul li a.item.item-icon-left.ng-binding {
+    background-color: rgba(0, 0, 0, 0);
+		    border-color: rgba(0, 0, 0, 0.03);
+		    color: #d6d6d6;
+	  
+}
+
+a.item.item-icon-left.ng-binding :hover {
+    background-color: #000;
+	border-color: rgba(0, 0, 0, 0.03);
+	color: #d6d6d6;
+	  
+}
+
+nav ul.list.dark {
+    /* background-color: #000; */
+    background-image: url(/img/menu.png);
+}
+
+.item-divider {
+	
+    background-color: rgba(245, 245, 245, 0);
+	   border-color: rgba(0, 0, 0, 0.03);
+}
+nav ul li a.item:hover {
+    background-color: rgba(181, 211, 52, 0.84) !important;
+    color: #000 !important;
+}
+
+
+ion-header-bar.bar-content.bar.bar-header {
+    border-bottom: 5px solid rgb(0, 0, 0);
+    border-image: url(/img/border.png) 10;
+	  -webkit-border-image: url(/img/border.png) 10;
+    -o-border-image: url(/img/border.png) 10;
+}
+
+.mm-mm_login_credentials .box {
+    background: rgba(0, 0, 0, 0);
+    border: 0px solid #dddddd;
+}
+
+.mm-mm_login_credentials .box .item-text-wrap {
+	    background: rgba(0, 0, 0, 0);
+    border: 0px solid #dddddd;
+}
+
+button.button.button-block.button-positive.ng-binding {
+    background-color: #009ca3;
+    border-color: #009ca3;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+button.button.button-block.button-positive.ng-binding: hover {
+    background-color: #b5d334;
+    border-color: #b5d334;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+.button-clear.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #009ca3;
+}
+
+
+.mm-bglogo {
+  background-color: #009ca3;
+  /* Change this to add a bg image or change color */
+  background: -webkit-radial-gradient(#009ca3, #009ca0);
+  background: radial-gradient(#009ca3, #009ca0);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: table; }
+  
+  
+  
+  .button.button-positive {
+    border-color: #b5d334;
+    background-color: #b5d334;
+    color: #fff;
+	  border-radius: 0;
+}
+
+.action-sheet .button {
+    color: #009ca3;
+}
+.action-sheet .button:hover {
+    color: #b5d334;
+	    background-color: #2d2d2d;
+}
+
+
+.action-sheet-cancel {
+    border-radius: 0px;
+	background-color: rgba(0, 0, 0, 0.98);
+    border-color: #b5d334;
+    border-radius: 0;
+    text-transform: uppercase;
+	color : #fff !important;
+
+}
+
+
+.action-sheet-title {
+    padding: 16px;
+    color: #f7f7f7;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #009ca3;
+}
+
+i.icon {
+    color: #009ca3 !important;
+}
+
+
+nav ul li a i.icon {
+    color: #d6d6d6 !important;
+}
