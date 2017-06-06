@@ -127,10 +127,9 @@ nav ul li a.item:hover {
 
 
 ion-header-bar.bar-content.bar.bar-header {
-    border-bottom: 5px solid rgb(0, 0, 0);
-    border-image: url('../../border.png') 10;
-	  -webkit-border-image: url('../../border.png') 10;
-    -o-border-image: url('../../border.png') 10;
+    border-bottom: 5px;	
+	border-style: solid;
+    border-color : #e68c06;
 }
 
 .mm-mm_login_credentials .box {
