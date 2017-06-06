@@ -108,13 +108,11 @@ a.item.item-icon-left.ng-binding :hover {
 }
 
 nav ul.list.dark {
-    /* background-color: #000; */
-    background-image: url('../../menu.png');
-	background: #0f0d15; /* Old Browsers */
-	background: -webkit-radial-gradient(center,#0f0d15,#110c43); /*Safari 5.1-6*/
-	background: -o-radial-gradient(center,#0f0d15,#110c43); /*Opera 11.1-12*/
-	background: -moz-radial-gradient(center,#0f0d15,#110c43); /*Fx 3.6-15*/
-	background: radial-gradient(ellipse at center, #0f0d15, #110c43); /*Standard*/
+		background: #050e37; 
+		background: -moz-linear-gradient(top, #050e37 0%, #123252 100%); 
+		background: -webkit-linear-gradient(top, #050e37 0%,#123252 100%); 
+		background: linear-gradient(to bottom, #050e37 0%,#123252 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050e37', endColorstr='#123252',GradientType=0 ); 
 }
 
 .item-divider {
