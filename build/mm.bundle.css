@@ -12687,6 +12687,16 @@ mm-course-list-item
 mm-course-list-item div.item-icon-left.earlysubmission {
   color: #3a3a3a; }
 
+.mm-fileuploader-file-handler input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none;
+  z-index: 100; }
+
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
 .mm-grades-container {
@@ -12945,16 +12955,6 @@ li.mm-question-answer-incorrect,
 #mm-settings-languagelabel {
   color: #3a3a3a; }
 
-.mm-fileuploader-file-handler input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none;
-  z-index: 100; }
-
 .bar-side-menu {
   border-color: transparent;
   background-color: #f98012;
@@ -13133,6 +13133,39 @@ li.mm-question-answer-incorrect,
     border-bottom: 1px solid #dddddd; }
   .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .item, .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .mm-grades-table .itemcenter, .mm-grades-table .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .itemcenter {
     border-bottom: 0; }
+
+.mma-qtype-multianswer-container p {
+  margin: 0 0 .5em; }
+
+.mma-qtype-multianswer-container .answer div.r0, .mma-qtype-multianswer-container .answer div.r1 {
+  padding: 0.3em; }
+
+.mma-qtype-multianswer-container table {
+  width: 100%;
+  display: table; }
+
+.mma-qtype-multianswer-container tr {
+  display: table-row; }
+
+.mma-qtype-multianswer-container td {
+  display: table-cell; }
+
+.mma-qtype-multianswer-container input, .mma-qtype-multianswer-container select {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px; }
+
+.mma-qtype-multianswer-container select {
+  height: 30px;
+  line-height: 30px; }
+
+.mma-qtype-multianswer-container input[type="radio"], .mma-qtype-multianswer-container input[type="checkbox"] {
+  margin-top: -4px;
+  margin-right: 7px; }
 
 .mm-site_mod_assign div.submissioneditable p,
 .mm-site_mod_assign-submission div.submissioneditable p {
@@ -13331,6 +13364,19 @@ p.mma-mod-assign-warning {
   margin: 0;
   width: auto; }
 
+.mm-site_mod_choice .chart {
+  max-width: 400px;
+  margin: 0 auto; }
+
+@media (min-width: 767px) {
+  .mm-site_mod_choice .col {
+    border-left: 1px solid #dddddd; }
+    .mm-site_mod_choice .col.item, .mm-site_mod_choice .mm-grades-table .col.itemcenter, .mm-grades-table .mm-site_mod_choice .col.itemcenter, .mm-site_mod_choice .col .chart-item {
+      margin-top: 0;
+      border-top: 0; }
+    .mm-site_mod_choice .col:first-child {
+      border-left: 0; } }
+
 .mma-chat-notice {
   text-align: center;
   margin-top: 10px; }
@@ -13382,19 +13428,6 @@ p.mma-mod-assign-warning {
 
 .mm-site_mod_feedback-form input, .mm-site_mod_feedback-form textarea {
   background: transparent; }
-
-.mm-site_mod_choice .chart {
-  max-width: 400px;
-  margin: 0 auto; }
-
-@media (min-width: 767px) {
-  .mm-site_mod_choice .col {
-    border-left: 1px solid #dddddd; }
-    .mm-site_mod_choice .col.item, .mm-site_mod_choice .mm-grades-table .col.itemcenter, .mm-grades-table .mm-site_mod_choice .col.itemcenter, .mm-site_mod_choice .col .chart-item {
-      margin-top: 0;
-      border-top: 0; }
-    .mm-site_mod_choice .col:first-child {
-      border-left: 0; } }
 
 .mma-forum-discussion-link {
   text-decoration: none; }
@@ -13459,6 +13492,122 @@ p.mma-mod-assign-warning {
 .mm-nest-cards .mma-forum-reply-edit {
   padding: 0;
   border: 0; }
+
+.mma-mod-lesson-slideshow {
+  max-width: 100%;
+  max-height: 100%; }
+
+.mma-mod-lesson-ongoingscore,
+.item.mma-mod-lesson-ongoingscore,
+.mm-grades-table .mma-mod-lesson-ongoingscore.itemcenter,
+.mma-mod-lesson-ongoingscore span,
+.item.mma-mod-lesson-ongoingscore span, .mm-grades-table .mma-mod-lesson-ongoingscore.itemcenter span {
+  color: #626262;
+  font-size: 14px; }
+
+.mma-mod_lesson-lessonstats .item.row .col-33, .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33,
+.mma-mod_lesson-lessonstats .item.row .col-50,
+.mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table
+.mma-mod_lesson-lessonstats .row.itemcenter .col-50, .mma-mod_lesson-userstats .item.row .col-33, .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33,
+.mma-mod_lesson-userstats .item.row .col-50,
+.mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table
+.mma-mod_lesson-userstats .row.itemcenter .col-50 {
+  border-color: #dddddd;
+  border-style: solid; }
+  .mma-mod_lesson-lessonstats .item.row .col-33:not(:first-child), .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33:not(:first-child),
+  .mma-mod_lesson-lessonstats .item.row .col-50:not(:first-child),
+  .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table
+  .mma-mod_lesson-lessonstats .row.itemcenter .col-50:not(:first-child), .mma-mod_lesson-userstats .item.row .col-33:not(:first-child), .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33:not(:first-child),
+  .mma-mod_lesson-userstats .item.row .col-50:not(:first-child),
+  .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table
+  .mma-mod_lesson-userstats .row.itemcenter .col-50:not(:first-child) {
+    border-left-width: 1px; }
+
+.mm-site_mod_lesson-userretake .mma-mod_lesson-answer .item, .mm-site_mod_lesson-userretake .mma-mod_lesson-answer .mm-grades-table .itemcenter, .mm-grades-table .mm-site_mod_lesson-userretake .mma-mod_lesson-answer .itemcenter {
+  border-top: 1px solid #dddddd;
+  border-radius: 0; }
+
+.mm-site_mod_lesson-userretake .highlight {
+  background-color: #cce0f6; }
+  .mm-site_mod_lesson-userretake .highlight p {
+    color: #004c9f; }
+
+.mma-scorm-level-0 {
+  padding-left: 16px; }
+
+.mma-scorm-level-1 {
+  padding-left: 31px; }
+
+.mma-scorm-level-2 {
+  padding-left: 46px; }
+
+.mma-scorm-level-3 {
+  padding-left: 61px; }
+
+.mma-scorm-level-4 {
+  padding-left: 76px; }
+
+.mma-scorm-level-5 {
+  padding-left: 91px; }
+
+.mma-scorm-level-6 {
+  padding-left: 106px; }
+
+.mma-scorm-level-7 {
+  padding-left: 121px; }
+
+.mma-scorm-level-8 {
+  padding-left: 136px; }
+
+.mma-scorm-level-9 {
+  padding-left: 151px; }
+
+.mma-scorm-level-10 {
+  padding-left: 166px; }
+
+.mma-scorm-level-11 {
+  padding-left: 181px; }
+
+.mma-scorm-level-12 {
+  padding-left: 196px; }
+
+.mma-scorm-level-13 {
+  padding-left: 211px; }
+
+.mma-scorm-level-14 {
+  padding-left: 226px; }
+
+.mma-scorm-level-15 {
+  padding-left: 241px; }
+
+.mma-mod-scorm-checkbox-padding {
+  padding: 5px 10px; }
+
+.mma-mod-scorm-warning {
+  color: #cb3d4d; }
+
+ion-popover-view {
+  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
+  /* Decrease items padding in popover. */ }
+  ion-popover-view.mma-scorm-popover {
+    height: auto;
+    max-height: 80%;
+    overflow: scroll; }
+    ion-popover-view.mma-scorm-popover ion-content {
+      position: relative; }
+    ion-popover-view.mma-scorm-popover::-webkit-scrollbar {
+      display: none; }
+    ion-popover-view.mma-scorm-popover p.padding, ion-popover-view.mma-scorm-popover .item p.item-heading.padding, .item ion-popover-view.mma-scorm-popover p.item-heading.padding, ion-popover-view.mma-scorm-popover .mm-grades-table .itemcenter p.item-heading.padding, .mm-grades-table .itemcenter ion-popover-view.mma-scorm-popover p.item-heading.padding {
+      margin: 0px;
+      /* Don't add margins to p with padding inside the TOC. */ }
+  ion-popover-view .mma-scorm-popover-item {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+/* Fix popover styles in iOS. */
+.platform-ios ion-popover-view.mma-scorm-popover {
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 p.mma-mod-quiz-warning {
   color: #cb3d4d; }
@@ -13552,45 +13701,6 @@ p.mma-mod-quiz-warning {
   .mm-site_mod_survey select.mma-mod_survey-select .mma-mod_survey-defaultoption {
     display: none; }
 
-.mma-mod-lesson-slideshow {
-  max-width: 100%;
-  max-height: 100%; }
-
-.mma-mod-lesson-ongoingscore,
-.item.mma-mod-lesson-ongoingscore,
-.mm-grades-table .mma-mod-lesson-ongoingscore.itemcenter,
-.mma-mod-lesson-ongoingscore span,
-.item.mma-mod-lesson-ongoingscore span, .mm-grades-table .mma-mod-lesson-ongoingscore.itemcenter span {
-  color: #626262;
-  font-size: 14px; }
-
-.mma-mod_lesson-lessonstats .item.row .col-33, .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33,
-.mma-mod_lesson-lessonstats .item.row .col-50,
-.mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table
-.mma-mod_lesson-lessonstats .row.itemcenter .col-50, .mma-mod_lesson-userstats .item.row .col-33, .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33,
-.mma-mod_lesson-userstats .item.row .col-50,
-.mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table
-.mma-mod_lesson-userstats .row.itemcenter .col-50 {
-  border-color: #dddddd;
-  border-style: solid; }
-  .mma-mod_lesson-lessonstats .item.row .col-33:not(:first-child), .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33:not(:first-child),
-  .mma-mod_lesson-lessonstats .item.row .col-50:not(:first-child),
-  .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table
-  .mma-mod_lesson-lessonstats .row.itemcenter .col-50:not(:first-child), .mma-mod_lesson-userstats .item.row .col-33:not(:first-child), .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33:not(:first-child),
-  .mma-mod_lesson-userstats .item.row .col-50:not(:first-child),
-  .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table
-  .mma-mod_lesson-userstats .row.itemcenter .col-50:not(:first-child) {
-    border-left-width: 1px; }
-
-.mm-site_mod_lesson-userretake .mma-mod_lesson-answer .item, .mm-site_mod_lesson-userretake .mma-mod_lesson-answer .mm-grades-table .itemcenter, .mm-grades-table .mm-site_mod_lesson-userretake .mma-mod_lesson-answer .itemcenter {
-  border-top: 1px solid #dddddd;
-  border-radius: 0; }
-
-.mm-site_mod_lesson-userretake .highlight {
-  background-color: #cce0f6; }
-  .mm-site_mod_lesson-userretake .highlight p {
-    color: #004c9f; }
-
 .mm-site_mod_wiki {
   background-color: white;
   /* Hide edit section links */ }
@@ -13622,83 +13732,6 @@ p.mma-mod-quiz-warning {
     background-color: #eeeeee; }
   .mm-site_mod_wiki .mma-mod_wiki-subwiki-picker .item.item-selected .icon, .mm-site_mod_wiki .mma-mod_wiki-subwiki-picker .mm-grades-table .item-selected.itemcenter .icon, .mm-grades-table .mm-site_mod_wiki .mma-mod_wiki-subwiki-picker .item-selected.itemcenter .icon {
     font-size: 24px; }
-
-.mma-scorm-level-0 {
-  padding-left: 16px; }
-
-.mma-scorm-level-1 {
-  padding-left: 31px; }
-
-.mma-scorm-level-2 {
-  padding-left: 46px; }
-
-.mma-scorm-level-3 {
-  padding-left: 61px; }
-
-.mma-scorm-level-4 {
-  padding-left: 76px; }
-
-.mma-scorm-level-5 {
-  padding-left: 91px; }
-
-.mma-scorm-level-6 {
-  padding-left: 106px; }
-
-.mma-scorm-level-7 {
-  padding-left: 121px; }
-
-.mma-scorm-level-8 {
-  padding-left: 136px; }
-
-.mma-scorm-level-9 {
-  padding-left: 151px; }
-
-.mma-scorm-level-10 {
-  padding-left: 166px; }
-
-.mma-scorm-level-11 {
-  padding-left: 181px; }
-
-.mma-scorm-level-12 {
-  padding-left: 196px; }
-
-.mma-scorm-level-13 {
-  padding-left: 211px; }
-
-.mma-scorm-level-14 {
-  padding-left: 226px; }
-
-.mma-scorm-level-15 {
-  padding-left: 241px; }
-
-.mma-mod-scorm-checkbox-padding {
-  padding: 5px 10px; }
-
-.mma-mod-scorm-warning {
-  color: #cb3d4d; }
-
-ion-popover-view {
-  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
-  /* Decrease items padding in popover. */ }
-  ion-popover-view.mma-scorm-popover {
-    height: auto;
-    max-height: 80%;
-    overflow: scroll; }
-    ion-popover-view.mma-scorm-popover ion-content {
-      position: relative; }
-    ion-popover-view.mma-scorm-popover::-webkit-scrollbar {
-      display: none; }
-    ion-popover-view.mma-scorm-popover p.padding, ion-popover-view.mma-scorm-popover .item p.item-heading.padding, .item ion-popover-view.mma-scorm-popover p.item-heading.padding, ion-popover-view.mma-scorm-popover .mm-grades-table .itemcenter p.item-heading.padding, .mm-grades-table .itemcenter ion-popover-view.mma-scorm-popover p.item-heading.padding {
-      margin: 0px;
-      /* Don't add margins to p with padding inside the TOC. */ }
-  ion-popover-view .mma-scorm-popover-item {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-
-/* Fix popover styles in iOS. */
-.platform-ios ion-popover-view.mma-scorm-popover {
-  padding-top: 10px;
-  padding-bottom: 10px; }
 
 .qbehaviour_deferredcbm_actual_percentage {
   font-weight: bold; }
@@ -13815,6 +13848,99 @@ ion-popover-view {
   z-index: 3;
   box-shadow: 3px 3px 4px #626262; }
 
+.mma-qtype-ddmarker-container mm-loading {
+  position: absolute;
+  left: 50%; }
+
+.mma-qtype-ddmarker-container .qtext {
+  margin-bottom: 0.5em;
+  display: block; }
+
+.mma-qtype-ddmarker-container div.droparea img {
+  border: 1px solid #626262;
+  max-width: 100%; }
+
+.mma-qtype-ddmarker-container .draghome img, .mma-qtype-ddmarker-container .draghome span {
+  visibility: hidden; }
+
+.mma-qtype-ddmarker-container .dragitems .dragitem {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2; }
+
+.mma-qtype-ddmarker-container .dropzones {
+  position: absolute; }
+
+.mma-qtype-ddmarker-container .dropzones svg {
+  z-index: 3; }
+
+.mma-qtype-ddmarker-container .dragitem.beingdragged .markertext {
+  z-index: 5;
+  box-shadow: 3px 3px 4px #626262; }
+
+.mma-qtype-ddmarker-container .dragitems .draghome {
+  margin: 10px;
+  display: inline-block; }
+
+.mma-qtype-ddmarker-container .dragitems.readonly .dragitem {
+  cursor: auto; }
+
+.mma-qtype-ddmarker-container div.ddarea {
+  text-align: center; }
+
+.mma-qtype-ddmarker-container div.ddarea .markertexts {
+  min-height: 80px;
+  position: absolute;
+  text-align: left; }
+
+.mma-qtype-ddmarker-container .dropbackground {
+  margin: 0 auto; }
+
+.mma-qtype-ddmarker-container div.dragitems div.draghome, .mma-qtype-ddmarker-container div.dragitems div.dragitem,
+.mma-qtype-ddmarker-container div.draghome, .mma-qtype-ddmarker-container div.drag {
+  font: 13px/1.231 arial,helvetica,clean,sans-serif; }
+
+.mma-qtype-ddmarker-container div.dragitems span.markertext,
+.mma-qtype-ddmarker-container div.markertexts span.markertext {
+  margin: 0 5px;
+  z-index: 2;
+  background-color: #ffffff;
+  border: 2px solid #626262;
+  padding: 5px;
+  display: inline-block;
+  zoom: 1;
+  border-radius: 10px; }
+
+.mma-qtype-ddmarker-container div.markertexts span.markertext {
+  z-index: 3;
+  background-color: #feefd1;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fbad1a;
+  position: absolute; }
+
+.mma-qtype-ddmarker-container span.wrongpart {
+  background-color: #feefd1;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fbad1a;
+  padding: 5px;
+  border-radius: 10px;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  margin: 5px;
+  display: inline-block; }
+
+.mma-qtype-ddmarker-container div.dragitems img.target {
+  position: absolute;
+  left: -7px;
+  /* This must be half the size of the target image, minus 0.5. */
+  top: -7px;
+  /* In other words, this works for a 15x15 cross-hair. */ }
+
+.mma-qtype-ddmarker-container div.dragitems div.draghome img.target {
+  display: none; }
+
 .mma-qtype-ddwtos-container .qtext {
   margin-bottom: 0.5em;
   display: block; }
@@ -13911,141 +14037,6 @@ ion-popover-view {
 .mma-qtype-ddwtos-container sub {
   bottom: -0.2em; }
 
-.mma-qtype-ddmarker-container mm-loading {
-  position: absolute;
-  left: 50%; }
-
-.mma-qtype-ddmarker-container .qtext {
-  margin-bottom: 0.5em;
-  display: block; }
-
-.mma-qtype-ddmarker-container div.droparea img {
-  border: 1px solid #626262;
-  max-width: 100%; }
-
-.mma-qtype-ddmarker-container .draghome img, .mma-qtype-ddmarker-container .draghome span {
-  visibility: hidden; }
-
-.mma-qtype-ddmarker-container .dragitems .dragitem {
-  cursor: pointer;
-  position: absolute;
-  z-index: 2; }
-
-.mma-qtype-ddmarker-container .dropzones {
-  position: absolute; }
-
-.mma-qtype-ddmarker-container .dropzones svg {
-  z-index: 3; }
-
-.mma-qtype-ddmarker-container .dragitem.beingdragged .markertext {
-  z-index: 5;
-  box-shadow: 3px 3px 4px #626262; }
-
-.mma-qtype-ddmarker-container .dragitems .draghome {
-  margin: 10px;
-  display: inline-block; }
-
-.mma-qtype-ddmarker-container .dragitems.readonly .dragitem {
-  cursor: auto; }
-
-.mma-qtype-ddmarker-container div.ddarea {
-  text-align: center; }
-
-.mma-qtype-ddmarker-container div.ddarea .markertexts {
-  min-height: 80px;
-  position: absolute;
-  text-align: left; }
-
-.mma-qtype-ddmarker-container .dropbackground {
-  margin: 0 auto; }
-
-.mma-qtype-ddmarker-container div.dragitems div.draghome, .mma-qtype-ddmarker-container div.dragitems div.dragitem,
-.mma-qtype-ddmarker-container div.draghome, .mma-qtype-ddmarker-container div.drag {
-  font: 13px/1.231 arial,helvetica,clean,sans-serif; }
-
-.mma-qtype-ddmarker-container div.dragitems span.markertext,
-.mma-qtype-ddmarker-container div.markertexts span.markertext {
-  margin: 0 5px;
-  z-index: 2;
-  background-color: #ffffff;
-  border: 2px solid #626262;
-  padding: 5px;
-  display: inline-block;
-  zoom: 1;
-  border-radius: 10px; }
-
-.mma-qtype-ddmarker-container div.markertexts span.markertext {
-  z-index: 3;
-  background-color: #feefd1;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #fbad1a;
-  position: absolute; }
-
-.mma-qtype-ddmarker-container span.wrongpart {
-  background-color: #feefd1;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #fbad1a;
-  padding: 5px;
-  border-radius: 10px;
-  filter: alpha(opacity=60);
-  opacity: 0.6;
-  margin: 5px;
-  display: inline-block; }
-
-.mma-qtype-ddmarker-container div.dragitems img.target {
-  position: absolute;
-  left: -7px;
-  /* This must be half the size of the target image, minus 0.5. */
-  top: -7px;
-  /* In other words, this works for a 15x15 cross-hair. */ }
-
-.mma-qtype-ddmarker-container div.dragitems div.draghome img.target {
-  display: none; }
-
-.mma-qtype-multianswer-container p {
-  margin: 0 0 .5em; }
-
-.mma-qtype-multianswer-container .answer div.r0, .mma-qtype-multianswer-container .answer div.r1 {
-  padding: 0.3em; }
-
-.mma-qtype-multianswer-container table {
-  width: 100%;
-  display: table; }
-
-.mma-qtype-multianswer-container tr {
-  display: table-row; }
-
-.mma-qtype-multianswer-container td {
-  display: table-cell; }
-
-.mma-qtype-multianswer-container input, .mma-qtype-multianswer-container select {
-  display: inline-block;
-  border: 1px solid #ccc;
-  padding: 4px 6px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin-bottom: 10px; }
-
-.mma-qtype-multianswer-container select {
-  height: 30px;
-  line-height: 30px; }
-
-.mma-qtype-multianswer-container input[type="radio"], .mma-qtype-multianswer-container input[type="checkbox"] {
-  margin-top: -4px;
-  margin-right: 7px; }
-
-.mma-qtype-match-container .item-select select,
-.mma-qtype-match-container .item-select .mm-select-fix {
-  padding: 0 36px 0 0;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column; }
-
 .mma-qtype-gapselect-container p {
   margin: 0 0 .5em; }
 
@@ -14060,3 +14051,12 @@ ion-popover-view {
   border-radius: 4px;
   margin-bottom: 10px;
   background: #f5f5f5; }
+
+.mma-qtype-match-container .item-select select,
+.mma-qtype-match-container .item-select .mm-select-fix {
+  padding: 0 36px 0 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; }
