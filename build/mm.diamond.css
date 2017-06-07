@@ -64,23 +64,6 @@ a.item.item-text-wrap.item-icon-left.item-icon-right {
 
 
 
- .home-hello .item{
-   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  border: 0;
-  background: rgba(255,255,255, 0.6);
- }
-
-
- .card.col.home {
-   margin: 10px 10px;
- }
- .card.col.home h1{text-align: center;}
- .card.col.home h2{text-align: center;}
-
  
 element.style {
     left: 61px;
@@ -94,16 +77,18 @@ element.style {
 
 
 nav ul li a.item.item-icon-left.ng-binding {
-    background-color: rgba(0, 0, 0, 0);
-		    border-color: rgba(0, 0, 0, 0.03);
+			background: #050e37; 
+        background-image: url('../menu.png');
 		    color: #d6d6d6;
+			border-color: rgba(0, 0, 0, 0.03);
 	  
 }
 
 a.item.item-icon-left.ng-binding :hover {
-    background-color: #000;
-	border-color: rgba(0, 0, 0, 0.03);
+   background: #050e37; 
+    background-image: url('../menu.png');
 	color: #d6d6d6;
+	border-color: rgba(0, 0, 0, 0.03);
 	  
 }
 
@@ -119,7 +104,7 @@ nav ul.list.dark {
 }
 nav ul li a.item:hover {
     background-color: rgba(181, 211, 52, 0.84) !important;
-    color: #000 !important;
+    color: #FFF !important;
 }
 
 
